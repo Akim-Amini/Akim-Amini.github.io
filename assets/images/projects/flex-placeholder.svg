@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="flex-title flex-desc">
+  <title id="flex-title">Screenshot placeholder for Flex by Dramin</title>
+  <desc id="flex-desc">A dark blue placeholder graphic labelled Flex by Dramin. It is not a real screenshot.</desc>
+
+  <defs>
+    <pattern id="flex-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#4D8DFF" stroke-opacity="0.10"/>
+    </pattern>
+    <radialGradient id="flex-glow" cx="78%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#7FB0FF" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#7FB0FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="#0E1728"/>
+  <rect width="800" height="500" fill="url(#flex-grid)"/>
+  <rect width="800" height="500" fill="url(#flex-glow)"/>
+
+  <text x="60" y="150" font-family="Arial, Helvetica, sans-serif" font-size="120" font-weight="700" fill="#4D8DFF" opacity="0.16">02</text>
+
+  <g fill="none" stroke="#7FB0FF" stroke-width="2" opacity="0.85">
+    <rect x="520" y="120" width="70" height="70" rx="12"/>
+    <rect x="610" y="120" width="70" height="70" rx="12"/>
+    <rect x="700" y="120" width="40" height="70" rx="12"/>
+    <path d="M520 230h220M520 260h160" stroke-linecap="round"/>
+    <path d="M520 300l40 40 40-40" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="60" y="330" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" fill="#E8EEF9">Flex by Dramin</text>
+  <text x="60" y="370" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="3" fill="#9BAAC2">SCREENSHOT PLACEHOLDER</text>
+  <text x="60" y="398" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.5" fill="#9BAAC2" opacity="0.8">REPLACE WITH A GENUINE SCREENSHOT</text>
+
+  <rect x="60" y="430" width="120" height="4" rx="2" fill="#4D8DFF"/>
+</svg>

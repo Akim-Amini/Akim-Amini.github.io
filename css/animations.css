@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Akim Amini — Personal Portfolio
+   Animation styles: keyframes and reduced-motion rules
+   --------------------------------------------------------------------------
+   The CSS keyframes below are used across the site:
+   - cursor-blink  : the typing cursor on the home page
+   - float-orb     : the floating shape on the Animated Concepts page
+   - pulse-ring    : the expanding ring around the orb
+   - shine         : the light sweep across the primary button on hover
+   ========================================================================== */
+
+@keyframes cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes float-orb {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-18px) scale(1.05);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.8);
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+
+  to {
+    transform: translateX(240%) skewX(-18deg);
+  }
+}
+
+/* Light sweep on the primary button. */
+.button-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38), transparent);
+  transform: translateX(-140%) skewX(-18deg);
+  pointer-events: none;
+}
+
+.button-primary:hover::after,
+.button-primary:focus-visible::after {
+  animation: shine 900ms ease;
+}
+
+/* --------------------------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------------------------
+   There are two ways motion is reduced:
+   1. The visitor's operating system setting (prefers-reduced-motion).
+   2. The manual toggle, which adds .reduce-motion to <html>.
+
+   When the visitor manually chooses full motion, .motion-full is added to
+   <html> and the operating-system rules below are skipped.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html:not(.motion-full) {
+    scroll-behavior: auto;
+  }
+
+  html:not(.motion-full) *,
+  html:not(.motion-full) *::before,
+  html:not(.motion-full) *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html:not(.motion-full) .reveal,
+  html:not(.motion-full) .reveal-demo-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  html:not(.motion-full) .typed-cursor {
+    animation: none;
+    opacity: 1;
+  }
+
+  html:not(.motion-full) .motion-status-full {
+    display: none;
+  }
+
+  html:not(.motion-full) .motion-status-reduced {
+    display: inline;
+  }
+}
+
+html.reduce-motion {
+  scroll-behavior: auto;
+}
+
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  transition-delay: 0ms !important;
+  scroll-behavior: auto !important;
+}
+
+html.reduce-motion .reveal,
+html.reduce-motion .reveal-demo-item {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html.reduce-motion .typed-cursor {
+  animation: none;
+  opacity: 1;
+}

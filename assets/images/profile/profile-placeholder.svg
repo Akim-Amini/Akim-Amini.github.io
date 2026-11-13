@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="420" height="420" role="img" aria-labelledby="profile-title profile-desc">
+  <title id="profile-title">Profile photograph placeholder</title>
+  <desc id="profile-desc">A neutral dark blue placeholder graphic with the initials AA. It is not a real photograph.</desc>
+
+  <defs>
+    <pattern id="profile-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#4D8DFF" stroke-opacity="0.10"/>
+    </pattern>
+    <radialGradient id="profile-glow" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#4D8DFF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#4D8DFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="420" height="420" fill="#0E1728"/>
+  <rect width="420" height="420" fill="url(#profile-grid)"/>
+  <rect x="1" y="1" width="418" height="418" rx="18" fill="none" stroke="#4D8DFF" stroke-opacity="0.35" stroke-width="2"/>
+
+  <circle cx="210" cy="180" r="150" fill="url(#profile-glow)"/>
+
+  <circle cx="210" cy="158" r="58" fill="none" stroke="#7FB0FF" stroke-width="2" stroke-dasharray="7 7"/>
+  <path d="M104 336c0-58 47-106 106-106s106 48 106 106" fill="none" stroke="#7FB0FF" stroke-width="2" stroke-dasharray="7 7"/>
+
+  <text x="210" y="176" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="#7FB0FF">AA</text>
+
+  <text x="210" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="2.5" fill="#9BAAC2">PROFILE PHOTO PLACEHOLDER</text>
+  <text x="210" y="400" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="1.5" fill="#9BAAC2" opacity="0.8">REPLACE WITH YOUR OWN PHOTOGRAPH</text>
+</svg>
